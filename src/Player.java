@@ -12,8 +12,22 @@ public class Player {
     public String get_color() {
         return this.color;
     }
+    public void play() {
 
+    }
+    public void complete_program() {
 
+    }
+    public void construct_wall() {
 
+    }
+    public void run_program() {
 
+    }
+    public void draw_card() {
+
+    }
+    public void discard_card() {
+
+    }
 }

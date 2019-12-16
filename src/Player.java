@@ -9,7 +9,7 @@ public class Player {
     private Queue<Classic_card> program;
     private ArrayList<Wall_card> wall_hand;
 
-    public String get_color() {
+    public String getColor() {
         return this.color;
     }
     public void play() {

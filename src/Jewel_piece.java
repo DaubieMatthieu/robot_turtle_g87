@@ -1,4 +1,4 @@
-public class Turtle_piece extends Piece {
+public class Jewel_piece extends Piece{
     private String color;
 
     public String getColor() {

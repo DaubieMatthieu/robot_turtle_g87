@@ -1,10 +1,7 @@
-public class Wall_card {
+public class Wall_piece {
     private String wall_type;
-    private String instruction;
 
     public String getWall_type() {
         return this.wall_type;
     }
-    public void place_wall() {}
 }
-

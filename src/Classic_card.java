@@ -2,7 +2,7 @@ public class Classic_card {
     private String color;
     private String instruction;
 
-    public String get_color() {
+    public String getColor() {
         return this.color;
     }
     public void run_instruction() {

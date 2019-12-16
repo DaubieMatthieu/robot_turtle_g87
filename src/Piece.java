@@ -3,17 +3,17 @@ import java.util.ArrayList;
 public class Piece {
     private ArrayList<Integer> position;
     private Character orientation;
-    private Boolean destructible;
+    private Boolean is_destructible;
 
-    public ArrayList<Integer> get_position(){
+    public ArrayList<Integer> getPosition(){
         return this.position;
     }
 
-    public Character get_orientation(){
+    public Character getOrientation(){
         return this.orientation;
     }
 
-    public Boolean is_destructible(){
-        return this.destructible;
+    public Boolean getIs_destructible(){
+        return this.is_destructible;
     }
 }

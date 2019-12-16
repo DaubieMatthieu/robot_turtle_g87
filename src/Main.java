@@ -1,6 +1,17 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Jewel_piece jewel_piece = new Jewel_piece();
-        System.out.println(jewel_piece.getIs_destructible());
+        get_random_board();
+    }
+
+    public static void get_random_board() {
+        Game game = new Game(3);
+        //génère une partie de 3 joueurs
+        //le plateau est accessible avec game.getBoard()
+        //La classe Board a pour seul attribut une ArrayList "piece_list" contenant toutes les pièces présentes sur le plateau
+        //On peut récupérer la position de ces pièces avec [nom_de_la_piece].getPosition() qui renvoie un array du type {x,y}
+        //il ne reste plus qu'à afficher la bonne image au bon endroit
+        //ça jsp faire je vous laisse regarder
     }
 }

@@ -1,5 +1,6 @@
+package modele;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Game {
     private ArrayList<Player> player_list;
@@ -52,5 +53,7 @@ public class Game {
     }
 
     public void play_game() {}
+
+    public void move_piece(Piece piece, Character direction) {}
 
 }

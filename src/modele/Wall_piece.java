@@ -1,3 +1,5 @@
+package modele;
+
 public class Wall_piece extends Piece{
     private String wall_type;
 

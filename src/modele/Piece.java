@@ -1,6 +1,8 @@
+package modele;
+
 import java.util.ArrayList;
 
-public class Piece {
+public abstract class Piece {
     private ArrayList<Integer> position;
     private Character orientation;
     private Boolean is_destructible;

@@ -1,4 +1,4 @@
-package modele;
+package model;
 
 public abstract class Card {
     private String instruction;
@@ -9,9 +9,5 @@ public abstract class Card {
 
     public void setInstruction(String instruction) {
         this.instruction = instruction;
-    }
-
-    public void run_instruction() {
-
     }
 }

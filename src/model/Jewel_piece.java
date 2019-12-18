@@ -1,7 +1,11 @@
-package modele;
+package model;
 
-public class Classic_card extends Card {
+public class Jewel_piece extends Piece{
     private String color;
+
+    Jewel_piece(String color) {
+        this.color=color;
+    }
 
     public String getColor() {
         return color;
@@ -11,4 +15,3 @@ public class Classic_card extends Card {
         this.color = color;
     }
 }
-

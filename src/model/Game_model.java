@@ -6,7 +6,7 @@ public class Game_model {
     private ArrayList<Player> player_list;
     private Board board;
 
-    public Game_model(int nb_joueur) {
+    public Game_model(int player_nb) {
         ArrayList<Player> player_list = new ArrayList<>();
         ArrayList<Piece> piece_list=new ArrayList<>();
 
@@ -30,33 +30,35 @@ public class Game_model {
         Jewel_piece blue_jewel = new Jewel_piece("blue");
         Jewel_piece red_jewel = new Jewel_piece("red");
 
-        if (nb_joueur > 2) {
+        if (player_nb > 2) {
             player_list.add(green_player);
             piece_list.add(green_turtle);
         }
-        if (nb_joueur > 3) {
+
+        if (player_nb > 3) {
             player_list.add(pink_player);
             piece_list.add(pink_turtle);
         }
 
 
-        switch (nb_joueur) {
+        switch (player_nb) {
             case 2:
-                blue_turtle.setPosition(1,2);
-                red_turtle.setPosition(1,6);
+                blue_turtle.setPosition(1,0);
+                red_turtle.setPosition(5,0);
 
-                green_jewel.setPosition(8,4);
+                green_jewel.setPosition(3,7);
 
                 piece_list.add(green_jewel);
+                piece_list = add_walls(piece_list);
                 break;
             case 3:
-                blue_turtle.setPosition(1, 1);
-                red_turtle.setPosition(1, 4);
-                green_turtle.setPosition(1, 7);
+                blue_turtle.setPosition(0, 0);
+                red_turtle.setPosition(3, 0);
+                green_turtle.setPosition(6, 0);
 
-                red_jewel.setPosition(8, 1);
-                green_jewel.setPosition(8, 4);
-                blue_jewel.setPosition(8, 7);
+                red_jewel.setPosition(0, 7);
+                green_jewel.setPosition(3, 7);
+                blue_jewel.setPosition(6, 7);
 
                 piece_list.add(red_jewel);
                 piece_list.add(green_jewel);
@@ -65,13 +67,13 @@ public class Game_model {
                 break;
 
             case 4:
-                blue_turtle.setPosition(1, 1);
-                red_turtle.setPosition(1, 3);
-                green_turtle.setPosition(1, 6);
-                pink_turtle.setPosition(1, 8);
+                blue_turtle.setPosition(0, 0);
+                red_turtle.setPosition(2, 0);
+                green_turtle.setPosition(5, 0);
+                pink_turtle.setPosition(7, 0);
 
-                red_jewel.setPosition(8, 2);
-                blue_jewel.setPosition(8, 7);
+                red_jewel.setPosition(1, 7);
+                blue_jewel.setPosition(6, 7);
                 piece_list.add(red_jewel);
                 piece_list.add(blue_jewel);
                 break;
@@ -117,30 +119,12 @@ public class Game_model {
     public void move_piece(Piece piece, Character direction) {}
 
     public ArrayList<Piece> add_walls(ArrayList<Piece> piece_list) {
-        Wall_piece wall_piece1 = new Wall_piece();
-        wall_piece1.setPosition(1, 8);
-        piece_list.add(wall_piece1);
-        Wall_piece wall_piece2 = new Wall_piece();
-        wall_piece2.setPosition(2, 8);
-        piece_list.add(wall_piece2);
-        Wall_piece wall_piece3 = new Wall_piece();
-        wall_piece3.setPosition(3, 8);
-        piece_list.add(wall_piece3);
-        Wall_piece wall_piece4 = new Wall_piece();
-        wall_piece4.setPosition(4, 8);
-        piece_list.add(wall_piece4);
-        Wall_piece wall_piece5 = new Wall_piece();
-        wall_piece5.setPosition(5, 8);
-        piece_list.add(wall_piece5);
-        Wall_piece wall_piece6 = new Wall_piece();
-        wall_piece6.setPosition(6, 8);
-        piece_list.add(wall_piece6);
-        Wall_piece wall_piece7 = new Wall_piece();
-        wall_piece7.setPosition(7, 8);
-        piece_list.add(wall_piece7);
-        Wall_piece wall_piece8 = new Wall_piece();
-        wall_piece8.setPosition(8, 8);
-        piece_list.add(wall_piece8);
+        ArrayList<Piece> wall_pieces = new ArrayList<>();
+        for (int i=0;i<8;i++) {
+            wall_pieces.add(new Wall_piece());
+            wall_pieces.get(i).setPosition(7,i);
+        }
+        piece_list.addAll(wall_pieces);
         return piece_list;
     }
 }

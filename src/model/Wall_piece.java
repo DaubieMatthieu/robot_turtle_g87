@@ -4,11 +4,14 @@ public class Wall_piece extends Piece{
     private String wall_type;
 
     Wall_piece() {
-        this.wall_type="stone";
-        this.setIs_destructible(false);
+        this("stone");
     }
 
     Wall_piece(String wall_type) {
+        this(new Position(), wall_type);
+    }
+
+    Wall_piece(Position position, String wall_type) {
         switch (wall_type) {
             case "ice":
                 this.wall_type="ice";
@@ -21,6 +24,7 @@ public class Wall_piece extends Piece{
             default:
                 System.out.println("Erreur à Wall_piece.java:Wall_piece(String wall_type):Type de mur inconnu");
         }
+        this.setPosition(position);
     }
 
     public String getWall_type() {

@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="view.Board_panel">
+  <grid id="27dc6" class="view.Background_panel" binding="board_grid_panel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="698" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-12695109"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="61c1b" class="javax.swing.JButton" binding="box_01">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9ebf7" class="javax.swing.JButton" binding="box_02">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="4fe1d" class="javax.swing.JButton" binding="box_03">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e7416" class="javax.swing.JButton" binding="box_04">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="209aa" class="javax.swing.JButton" binding="box_05">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="430c3" class="javax.swing.JButton" binding="box_06">
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="53309" class="javax.swing.JButton" binding="box_07">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="4234c" class="javax.swing.JButton" binding="box_08">
+        <constraints>
+          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c2487" class="javax.swing.JButton" binding="box_09">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5c16f" class="javax.swing.JButton" binding="box_10">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2f8c4" class="javax.swing.JButton" binding="box_11">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="39f4d" class="javax.swing.JButton" binding="box_12">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2652c" class="javax.swing.JButton" binding="box_13">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5d7f1" class="javax.swing.JButton" binding="box_14">
+        <constraints>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e5508" class="javax.swing.JButton" binding="box_15">
+        <constraints>
+          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2f93c" class="javax.swing.JButton" binding="box_16">
+        <constraints>
+          <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="362cf" class="javax.swing.JButton" binding="box_17">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e51ed" class="javax.swing.JButton" binding="box_18">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ed080" class="javax.swing.JButton" binding="box_19">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c06dc" class="javax.swing.JButton" binding="box_20">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="b08a2" class="javax.swing.JButton" binding="box_21">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d8cd5" class="javax.swing.JButton" binding="box_22">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d4985" class="javax.swing.JButton" binding="box_23">
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c2f4a" class="javax.swing.JButton" binding="box_24">
+        <constraints>
+          <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="82a9" class="javax.swing.JButton" binding="box_25">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="8331b" class="javax.swing.JButton" binding="box_26">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e54dd" class="javax.swing.JButton" binding="box_27">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="cf7e2" class="javax.swing.JButton" binding="box_28">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="f748e" class="javax.swing.JButton" binding="box_29">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="7bdd1" class="javax.swing.JButton" binding="box_30">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="86e1" class="javax.swing.JButton" binding="box_31">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e2ddf" class="javax.swing.JButton" binding="box_32">
+        <constraints>
+          <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e5995" class="javax.swing.JButton" binding="box_33">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="a7211" class="javax.swing.JButton" binding="box_34">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="caf50" class="javax.swing.JButton" binding="box_35">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="7d7e1" class="javax.swing.JButton" binding="box_36">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="4a9dc" class="javax.swing.JButton" binding="box_37">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2363" class="javax.swing.JButton" binding="box_38">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="44600" class="javax.swing.JButton" binding="box_39">
+        <constraints>
+          <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="6aa6d" class="javax.swing.JButton" binding="box_40">
+        <constraints>
+          <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ec502" class="javax.swing.JButton" binding="box_41">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="30827" class="javax.swing.JButton" binding="box_42">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="7ea85" class="javax.swing.JButton" binding="box_43">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5fe92" class="javax.swing.JButton" binding="box_44">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="1865a" class="javax.swing.JButton" binding="box_45">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c7137" class="javax.swing.JButton" binding="box_46">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="dfcf8" class="javax.swing.JButton" binding="box_47">
+        <constraints>
+          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="f0dd0" class="javax.swing.JButton" binding="box_48">
+        <constraints>
+          <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="bcac7" class="javax.swing.JButton" binding="box_49">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="239dd" class="javax.swing.JButton" binding="box_50">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ff9ee" class="javax.swing.JButton" binding="box_51">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e7a5a" class="javax.swing.JButton" binding="box_52">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9145c" class="javax.swing.JButton" binding="box_53">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="3492e" class="javax.swing.JButton" binding="box_54">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="467ca" class="javax.swing.JButton" binding="box_55">
+        <constraints>
+          <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="eeee2" class="javax.swing.JButton" binding="box_56">
+        <constraints>
+          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5dbeb" class="javax.swing.JButton" binding="box_57">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="f8205" class="javax.swing.JButton" binding="box_58">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ac792" class="javax.swing.JButton" binding="box_59">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9e501" class="javax.swing.JButton" binding="box_60">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c0499" class="javax.swing.JButton" binding="box_61">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="a02a5" class="javax.swing.JButton" binding="box_62">
+        <constraints>
+          <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="f1f4c" class="javax.swing.JButton" binding="box_63">
+        <constraints>
+          <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="6655c" class="javax.swing.JButton" binding="box_64">
+        <constraints>
+          <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="false"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

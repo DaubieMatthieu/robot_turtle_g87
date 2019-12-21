@@ -3,6 +3,10 @@ package model;
 public class Wall_card extends Card {
     private String wall_type;
 
+    Wall_card() {
+        this("stone");
+    }
+
     Wall_card(String wall_type) {
         switch (wall_type) {
             case "ice":

@@ -19,7 +19,7 @@ public class Homepage_controller {
             if (homepage_view.getA2PlayersRadioBtn().isSelected()) {player_nb=2;}
             if (homepage_view.getA3PlayersRadioBtn().isSelected()) {player_nb=3;}
             if (homepage_view.getA4PlayersRadioBtn().isSelected()) {player_nb=4;}
-            Board_controller board_controller = new Board_controller(player_nb);
+            Game_controller game_controller = new Game_controller(player_nb);
         }
     }
 }

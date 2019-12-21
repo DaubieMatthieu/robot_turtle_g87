@@ -3,40 +3,34 @@ package model;
 import java.util.ArrayList;
 
 public abstract class Piece {
-    private ArrayList<Integer> position;
+    private Position position;
     private Character orientation;
     private Boolean is_destructible;
 
     Piece() {
-        this.position =
-            new ArrayList<Integer>() {{
-                add(0);
-                add(0);
-            }};
-        this.orientation = 'N';
-        is_destructible=false;
+        this(new Position(), 'N');
     }
 
-    Piece(ArrayList<Integer> position, Character orientation) {
+    Piece(Position position) {
+        this(position, 'N');
+    }
+
+    Piece(Position position, Character orientation) {
         this.position = position;
         this.orientation = orientation;
         is_destructible=false;
     }
 
-    public ArrayList<Integer> getPosition() {
+    public Position getPosition() {
         return position;
     }
 
-    public void setPosition(ArrayList<Integer> position) {
+    public void setPosition(Position position) {
         this.position = position;
     }
 
     public void setPosition(int x, int y) {
-        this.position =
-                new ArrayList<Integer>() {{
-                    add(x);
-                    add(y);
-                }};
+        this.position.setPosition(x,y);
     }
 
     public Character getOrientation() {

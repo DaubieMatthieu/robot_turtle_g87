@@ -5,6 +5,10 @@ public class Color_card extends Card {
 
     Color_card(String color) {
         switch (color) {
+            case "blue":
+                this.color="blue";
+                this.setInstruction("move_forward");
+                break;
             case "yellow":
                 this.color="yellow";
                 this.setInstruction("turn_left");
@@ -18,8 +22,7 @@ public class Color_card extends Card {
                 this.setInstruction("shoot_laser");
                 break;
             default:
-                this.color="blue";
-                this.setInstruction("move_forward");
+                System.out.println("erreur à Color_card: couleur inconnue");
         }
     }
 

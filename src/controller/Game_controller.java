@@ -145,6 +145,7 @@ public class Game_controller {
         game_view.getConstruct_wall_btn().setEnabled(false);
         game_view.getExecute_program_btn().setEnabled(false);
         game_view.enable_buttons_panel(game_view.getWalls_panel());
+        //TODO vérifier que le joueur n'entoure pas un joyau/joueur : vérifier règle
     }
 
     public void execute_program() {

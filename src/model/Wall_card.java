@@ -15,8 +15,6 @@ public class Wall_card extends Card {
             case "stone":
                 this.wall_type="stone";
                 break;
-            default:
-                System.out.println("Erreur à Wall_card.java:Wall_card(String wall_type):Type de mur inconnu");
         }
         this.setInstruction("place_wall");
     }

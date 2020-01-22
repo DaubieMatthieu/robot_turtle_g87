@@ -9,6 +9,10 @@ public class Position {
         this(0, 0);
     }
 
+    public Position(Position position1) {//crée une copie de position1
+        this(position1.getX(),position1.getY());
+    }
+
     public Position(ArrayList<Integer> position) {
         this.position = position;
     }
@@ -51,5 +55,9 @@ public class Position {
 
     public static boolean samePosition(Position position1, Position position2) {
         return position1.getX() == position2.getX() && position1.getY() == position2.getY();
+    }
+
+    public static boolean inRange(Position position) {
+        return position.getX() < 8 && position.getX() >= 0 && position.getY() < 8 && position.getX() >= 0;
     }
 }

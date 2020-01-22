@@ -5,5 +5,3 @@ public class Main {
         Homepage_controller homepage_controller = new Homepage_controller();
     }
 }
-
-//TODO réorganiser tout ce merdier

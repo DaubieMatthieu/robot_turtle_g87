@@ -30,6 +30,7 @@ public class Game_controller {
         game_view.disable_buttons_panel(game_view.getBoard_panel().getBoard_grid_panel());
     }
 
+
     public void setListeners() {
         ArrayList<JButton> controls_buttons = new ArrayList<>();
         controls_buttons.addAll(game_view.getButtons(game_view.getActions_panel()));
@@ -52,9 +53,18 @@ public class Game_controller {
         for (Piece piece: pieces_list) {game_view.display_piece(piece);}
     }
 
+    public void hide_pieces() {
+        game_view.hide_board_button();
+    }
+
+    public void refresh_pieces() {
+        hide_pieces();
+        display_pieces();
+    }
+
     class StartListener implements ActionListener {
         private ArrayList<Integer> used_color_cards = new ArrayList<>();
-        private Wall_card used_wall_card = null;
+        private Integer used_wall_card_nb = null;
         private String color_card_button_action;
         public void actionPerformed(ActionEvent e) {
             int sub=0;
@@ -91,6 +101,9 @@ public class Game_controller {
                             game_view.getDiscard_cards_btn().setEnabled(true);
                             game_view.getEnd_turn_btn().setEnabled(true);
                         }
+                    } else if (color_card_button_action.equals("discard_card")) {
+                        Color_card color_card = current_player.getCard_hand().get(card_nb);
+                        current_player.getDiscard_deck().add(color_card);
                     }
                     current_player.getCard_hand().remove(card_nb);
                     break;
@@ -100,24 +113,21 @@ public class Game_controller {
                 case "14":
                 case "15":
                     ((JButton)e.getSource()).setIcon(null);
-                    ((JButton)e.getSource()).setEnabled(false);
-                    int wall_nb = Integer.parseInt(e.getActionCommand())-11;
-                    used_wall_card =current_player.getWall_hand().get(wall_nb);
-                    current_player.getWall_hand().remove(wall_nb);
-                    game_view.getDiscard_cards_btn().setEnabled(true);
+                    used_wall_card_nb = Integer.parseInt(e.getActionCommand())-11;
                     game_view.disable_buttons_panel(game_view.getWalls_panel());
                     game_view.enable_free_board_buttons(game_model.getBoard());
-                    game_view.getEnd_turn_btn().setEnabled(true);
             break;
             default: //c'est un bouton du plateau
                 ArrayList<String> position_str = new ArrayList<>(Arrays.asList(e.getActionCommand().split(",")));
                 Position position = new Position(Integer.parseInt(position_str.get(0)),Integer.parseInt(position_str.get(1)));
-                current_player.play_wall_card(used_wall_card, game_model.getBoard(), position);
-                game_view.display_piece(game_model.getBoard().getPiece(position));
-                game_view.disable_buttons_panel(game_view.getBoard_panel().getBoard_grid_panel());
-                game_view.getConstruct_wall_btn().setEnabled(false);
-                game_view.getDiscard_cards_btn().setEnabled(true);
-                game_view.getEnd_turn_btn().setEnabled(true);
+                boolean success = current_player.play_wall_card(current_player.getWall_hand().get(used_wall_card_nb), game_model.getBoard(), position);
+                if (success) {
+                    current_player.getWall_hand().remove((int) used_wall_card_nb);//si on a pu placer le mur on le retire de la liste
+                    game_view.display_piece(game_model.getBoard().getPiece(position));
+                    game_view.disable_buttons_panel(game_view.getBoard_panel().getBoard_grid_panel());
+                    game_view.getDiscard_cards_btn().setEnabled(true);
+                    game_view.getEnd_turn_btn().setEnabled(true);
+                }//on continue le déroulement du tour si le mur a été placé, sinon on attend qu'il sélectionne un emplacement valable
             }
         }
 
@@ -125,12 +135,10 @@ public class Game_controller {
             this.used_color_cards = used_color_cards;
         }
 
-        public void setUsed_wall_card(Wall_card wall_card) {
-            this.used_wall_card = wall_card;
+        public void setUsed_wall_card_nb(Integer wall_card_nb) {
+            this.used_wall_card_nb = wall_card_nb;
         }
     }
-
-    //TODO peut etre laisser la possibilité au joueur de ne rien faire donc activer les boutons de fin de tour dès ceux de début de tout ont été activés
 
     public void complete_program() {
         game_view.getComplete_program_btn().setEnabled(false);
@@ -145,7 +153,6 @@ public class Game_controller {
         game_view.getConstruct_wall_btn().setEnabled(false);
         game_view.getExecute_program_btn().setEnabled(false);
         game_view.enable_buttons_panel(game_view.getWalls_panel());
-        //TODO vérifier que le joueur n'entoure pas un joyau/joueur : vérifier règle
     }
 
     public void execute_program() {
@@ -153,10 +160,14 @@ public class Game_controller {
         game_view.getConstruct_wall_btn().setEnabled(false);
         game_view.getExecute_program_btn().setEnabled(false);
         game_view.hide_piece(current_player.getPiece());
-        current_player.execute_program(game_model.getBoard());
+        is_over = current_player.execute_program(game_model.getBoard());
+        refresh_pieces();
         game_view.display_piece(current_player.getPiece());
         game_view.getDiscard_cards_btn().setEnabled(true);
         game_view.getEnd_turn_btn().setEnabled(true);
+        if (is_over) {
+            System.out.println("partie terminée");
+        }
     }
 
     public void discard_card() {
@@ -171,6 +182,12 @@ public class Game_controller {
     }
 
     public void new_turn() {
+        if (is_over) {
+            //game_view.setVisible(false);
+            //game_view.dispose();
+            //ne marche pas donc on ferme complètement l'application
+            System.exit(0);
+        }
         this.current_player_num=(this.current_player_num+1)%this.player_nb;
         this.current_player= game_model.getPlayer_list().get(current_player_num);
         String color=current_player.getColor();
@@ -185,6 +202,6 @@ public class Game_controller {
         game_view.getDiscard_cards_btn().setEnabled(false);
         game_view.getEnd_turn_btn().setEnabled(false);
         startListener.setUsed_color_cards(new ArrayList<>());
-        startListener.setUsed_wall_card(null);
+        startListener.setUsed_wall_card_nb(null);
     }
 }

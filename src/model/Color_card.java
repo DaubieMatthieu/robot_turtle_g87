@@ -21,8 +21,6 @@ public class Color_card extends Card {
                 this.color="laser";
                 this.setInstruction("shoot_laser");
                 break;
-            default:
-                System.out.println("erreur à Color_card: couleur inconnue");
         }
     }
 

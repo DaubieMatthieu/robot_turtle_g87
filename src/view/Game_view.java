@@ -7,8 +7,6 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-//TODO modifier forme boutons de controle et supprimer les bordures de cartes quand elles sont utilisées (esthétique)
-
 public class Game_view extends JFrame {
     private JPanel game_panel;
     private Board_panel board_panel;
@@ -121,8 +119,6 @@ public class Game_view extends JFrame {
             case "laser":
                 filepath = "res/images/cards/laser_card.png";
                 break;
-            default:
-                System.out.println("error at Board_view: unknown color");
         }
         Icon icon = new ImageIcon(filepath);
         button.setIcon(icon);
@@ -132,8 +128,8 @@ public class Game_view extends JFrame {
     public void display_wall_cards(ArrayList<Wall_card> wall_card_list) {
         ArrayList<JButton> buttons = getButtons(walls_panel);
         int wall_card_nb = wall_card_list.size();
-        for (int i=0; i<wall_card_nb; i++) {
-            display_wall_card(wall_card_list.get(i), buttons.get(i));
+        for (int i=0; i<5; i++) {
+            if (i<wall_card_nb) {display_wall_card(wall_card_list.get(i), buttons.get(i));} else {buttons.get(i).setIcon(null);}
         }
     }
 
@@ -147,8 +143,6 @@ public class Game_view extends JFrame {
             case "ice":
                 filepath = "res/images/pieces/walls/ice_wall_N.png";
                 break;
-            default:
-                System.out.println("error at Board_view: unknown wall_type");
         }
         Icon icon = new ImageIcon(filepath);
         button.setIcon(icon);
@@ -179,7 +173,7 @@ public class Game_view extends JFrame {
     public void enable_buttons_panel(JPanel jPanel) {
         ArrayList<JButton> buttons = getButtons(jPanel);
         for (JButton jButton:buttons) {
-            jButton.setEnabled(true);
+            if (jButton.getIcon()!=null) jButton.setEnabled(true);
         }
     }
 
@@ -192,6 +186,12 @@ public class Game_view extends JFrame {
                     getBoard_button(position).setEnabled(true);
                 }
             }
+        }
+    }
+
+    public void hide_board_button() {
+        for (Component component:getBoard_panel().getBoard_grid_panel().getComponents()) {
+            ((JButton)component).setIcon(null);
         }
     }
 
@@ -241,5 +241,9 @@ public class Game_view extends JFrame {
 
     public JFormattedTextField getCurrent_player() {
         return current_player;
+    }
+
+    public void close() {
+        this.dispose();
     }
 }

@@ -6,6 +6,7 @@ public class Player {
     private String color;
     private Turtle_piece piece;
     private Queue<Color_card> card_deck;
+    private Queue<Color_card> discard_deck;
     private ArrayList<Color_card> card_hand;
     private Queue<Color_card> program = new LinkedList<>();
     private ArrayList<Wall_card> wall_hand;
@@ -14,23 +15,26 @@ public class Player {
         this.color=color;
         this.piece=new Turtle_piece(color);
         init();
-
     }
 
-    public void execute_program(Board board) {
+    public boolean execute_program(Board board) {
         int program_size = program.size();
+        boolean game_over=false;
         for (int i=0;i<program_size;i++) {
-            play_color_card(program.poll(), board);
+            Color_card color_card=program.poll();
+            game_over = play_color_card(color_card, board);
+            discard_deck.add(color_card);
+            if (game_over) {
+                return game_over;
+            }
         }
+        return game_over;
     }
 
     public void complete_program() {
 
     }
     public void construct_wall() {
-
-    }
-    public void run_program() {
 
     }
 
@@ -42,15 +46,25 @@ public class Player {
     }
 
     public void draw_card() {
+        if (card_deck.size()==0) {
+            refill_card_deck();
+        }
         card_hand.add(card_deck.poll());
     }
 
-    public void play_color_card(Color_card card, Board board) {
-        board.piece_do(this.getPiece(),card.getInstruction());
+    public void refill_card_deck() {
+        ArrayList<Color_card> color_card_list= new ArrayList<>(discard_deck);
+        Collections.shuffle(color_card_list);
+        card_deck = new LinkedList<>(color_card_list);
+        discard_deck.clear();
     }
 
-    public void play_wall_card(Wall_card card, Board board, Position position) {
-        board.piece_do(new Wall_piece(position, card.getWall_type()),card.getInstruction());
+    public boolean play_color_card(Color_card card, Board board) {
+        return board.piece_do(this.getPiece(),card.getInstruction());
+    }
+
+    public boolean play_wall_card(Wall_card card, Board board, Position position) {
+        return board.piece_do(new Wall_piece(position, card.getWall_type()),card.getInstruction());//=false si le mur entoure un joueur/joyau
     }
 
     public void init() {
@@ -67,6 +81,8 @@ public class Player {
         }
         Collections.shuffle(color_card_list);
         card_deck = new LinkedList<>(color_card_list);
+
+        discard_deck = new LinkedList<>();
 
         card_hand = new ArrayList<>();
         for (int i=0; i<5; i++) {draw_card();}
@@ -124,4 +140,7 @@ public class Player {
         this.wall_hand = wall_hand;
     }
 
+    public Queue<Color_card> getDiscard_deck() {
+        return discard_deck;
+    }
 }

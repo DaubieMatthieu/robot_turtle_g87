@@ -80,22 +80,7 @@ public class Game_model {
         }
 
         this.player_list=player_list;
-        this.board=new Board(piece_list);
-    }
-
-    Game_model(ArrayList<Player> player_list) {
-        this.player_list=player_list;
-        this.board=new Board();
-    }
-
-    Game_model(Board board) {
-        this.player_list=new ArrayList<>();
-        this.board=board;
-    }
-
-    public Game_model() {
-        this.player_list=new ArrayList<>();
-        this.board=new Board();
+        this.board=new Board(piece_list,player_nb);
     }
 
     public ArrayList<Player> getPlayer_list() {

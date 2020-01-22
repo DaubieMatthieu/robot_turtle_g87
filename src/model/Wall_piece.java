@@ -21,8 +21,6 @@ public class Wall_piece extends Piece{
                 this.wall_type="stone";
                 this.setIs_destructible(false);
                 break;
-            default:
-                System.out.println("Erreur à Wall_piece.java:Wall_piece(String wall_type):Type de mur inconnu");
         }
         this.setPosition(position);
     }

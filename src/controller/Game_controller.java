@@ -101,6 +101,7 @@ public class Game_controller {
                             game_view.getDiscard_cards_btn().setEnabled(true);
                             game_view.getEnd_turn_btn().setEnabled(true);
                         }
+                        if (current_player.getProgram().size()>4) {game_view.disable_buttons_panel(game_view.getCards_panel());}
                     } else if (color_card_button_action.equals("discard_card")) {
                         Color_card color_card = current_player.getCard_hand().get(card_nb);
                         current_player.getDiscard_deck().add(color_card);
@@ -196,7 +197,7 @@ public class Game_controller {
         game_view.display_wall_cards(current_player.getWall_hand());
         game_view.disable_buttons_panel(game_view.getCards_panel());
         game_view.disable_buttons_panel(game_view.getWalls_panel());
-        game_view.getComplete_program_btn().setEnabled(true);
+        if (current_player.getProgram().size()<5) {game_view.getComplete_program_btn().setEnabled(true);}
         game_view.getConstruct_wall_btn().setEnabled(true);
         game_view.getExecute_program_btn().setEnabled(true);
         game_view.getDiscard_cards_btn().setEnabled(false);
